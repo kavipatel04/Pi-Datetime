@@ -1,0 +1,12 @@
+[Unit]
+Description=Timekeeper
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/server/Pi-Datetime/datetime/server
+ExecStart=sudo node node_time.js
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
