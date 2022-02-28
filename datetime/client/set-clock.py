@@ -1,7 +1,7 @@
 import json, requests 
 import os
 import datetime
-url = requests.get("https://10.13.68.207:3000/dateinfo")
+url = requests.get("http://10.13.68.207:3000/dateinfo")
 text = url.text
 
 data = json.loads(text)
