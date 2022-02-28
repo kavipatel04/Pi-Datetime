@@ -7,7 +7,7 @@ text = url.text
 data = json.loads(text)
 
 os.system(f"sudo timedatectl set-ntp false")
-os.system(f"sudo timedatectl set-time {data['year']}-{data['month']}-{data['date']}")
+os.system(f"sudo timedatectl set-time {data['year']}-{data['month'] +1}-{data['date']}")
 os.system(f"sudo timedatectl set-time {data['hours']}:{data['minutes']}:{data['seconds']}")
 os.system(f"sudo timedatectl set-ntp true")
 
