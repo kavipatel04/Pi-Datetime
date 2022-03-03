@@ -1,0 +1,11 @@
+[Unit]
+Description=TimeSetterService
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/python3 /home/pi/automate/Pi-Datetime/datetime/client/set-cl$
+
+[Install]
+WantedBy=multi-user.target
